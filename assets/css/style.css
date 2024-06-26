@@ -1,0 +1,107 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #444;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+#about,
+#work,
+#contact {
+    min-height: 100vh;
+}
+
+.profile {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.work-samples {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.work-samples .sample {
+    margin: 10px;
+    width: calc(33% - 20px);
+}
+
+.work-samples .sample img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.work-samples .sample img:hover {
+    transform: scale(1.05);
+}
+
+.work-samples .sample:first-child img {
+    width: 200%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .work-samples .sample {
+        width: calc(50% - 20px);
+    }
+
+    .work-samples .sample:first-child img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .work-samples .sample {
+        width: 100%;
+    }
+
+    .work-samples .sample:first-child img {
+        width: 100%;
+    }
+}
